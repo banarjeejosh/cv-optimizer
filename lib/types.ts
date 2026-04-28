@@ -48,41 +48,6 @@ export interface AnalysisResult {
 }
 
 /**
- * Per-locale configuration for analysis behavior.
- * Controls language-specific rules, weights, and text processing.
- */
-export interface LocaleConfig {
-  // Text processing
-  stopwords: Set<string>; // Words to ignore in keyword extraction
-  phrasePatterns: RegExp[]; // Multi-word phrases to detect (e.g., "project management")
-
-  // CV structure validation
-  sectionAliases: Record<string, string[]>; // e.g., { summary: ['summary', 'profile', 'overview'] }
-  requiredSections: string[]; // e.g., ['summary', 'experience', 'skills']
-
-  // Language features
-  strongVerbs: string[]; // Action verbs common in resumes
-  quantifierPattern: RegExp; // Pattern for numbers/metrics indicative of quantified impact
-  linkPattern: RegExp; // URLs and links
-  astriskRiskPatterns: Array<{ regex: RegExp; message: string }>; // ATS formatting risks
-
-  // Scoring
-  scoringWeights: {
-    keyword: number; // Weight for keyword coverage (e.g., 0.45)
-    clarity: number; // Weight for recruiter clarity (e.g., 0.35)
-    format: number; // Weight for format safety (e.g., 0.20)
-  };
-
-  // Sample data for demos
-  sampleCv: string; // Example CV for "Load Sample" feature
-  sampleJob: string; // Example job description for "Load Sample" feature
-
-  // UI labels (for use in components, not in analyzer)
-  // These are populated from lib/i18n.ts
-  labels: Record<string, string>;
-}
-
-/**
  * Form input validation schema shape.
  */
 export interface AnalysisFormInput {

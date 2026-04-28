@@ -102,6 +102,27 @@ Für den Bereich "Optimierter Lebenslauf":
 - Klare Abschnittsüberschriften und starke deutsche Engineering-Terminologie nutzen
 - Copy-paste-freundliches Format für Word/CV-Builder liefern
 
+Keyword-Extraktionsregeln (strikt einhalten):
+- NUR fachliche Begriffe extrahieren: Engineering-Disziplinen, Methoden, Software, Tools,
+  Normen (ISO, VDI, DIN, ATEX), Zertifizierungen, Maschinentypen, Prozessbezeichnungen,
+  Branchenterminologie, Projektmethoden (z.B. Lean, Six Sigma, FMEA)
+- NICHT extrahieren: Artikel, Pronomen, Präpositionen, Konjunktionen, allgemeine Verben,
+  Unternehmensgrößenangaben, Ortsangaben, Personenzahlen, Jahresangaben ohne fachlichen Kontext
+  (Beispiele für NICHT zu extrahieren: "ca.", "unseres", "teil", "sichern", "millionen",
+  "menschen", "größten", "ballungsräume", "europas", "1.200", "beschäftigten")
+
+Für das Feld "missing": Jeder Eintrag im Format
+"Fachbegriff → Abschnitt: [Kurzprofil / Kernkompetenzen / Berufserfahrung / Kenntnisse & Tools / Zertifizierungen]".
+Beispiel: "FMEA → Abschnitt: Kernkompetenzen oder Berufserfahrung"
+
+Fehler-Kategorien für das Feld "flaws" (alle prüfen):
+- Sprachliche Fehler: Grammatik, Rechtschreibung, Zeichensetzung, falscher Kasus oder Genus
+  (besonders wichtig für den deutschen Markt - sprachliche Sorgfalt gilt als Professionalitätsmerkmal)
+- Strukturelle Schwächen: fehlende Abschnitte, unklare Reihenfolge
+- ATS-Risiken: Tabellen, Icons, grafische Elemente, Textboxen
+- Keyword-Lücken: fehlende technische Begriffe mit hohem ATS-Gewicht
+- Schwache Formulierungen: passive oder generische Sprache ohne messbare Ergebnisse
+
 WICHTIG: Gib die vollständige Antwort ausschließlich als JSON zurück, exakt in dieser Struktur und ohne zusätzlichen Text:
 {
   "scores": {

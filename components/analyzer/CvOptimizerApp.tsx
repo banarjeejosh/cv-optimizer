@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Locale } from "@/lib/types";
-import { getConfig } from "@/lib/config";
+import { getSampleData } from "@/lib/config";
 import { useLocale, useTheme, useAnalysis } from "@/lib/hooks";
 import { Navbar } from "@/components/analyzer/Navbar";
 import { InputPanel } from "@/components/analyzer/InputPanel";
@@ -43,9 +43,9 @@ export function CvOptimizerApp() {
 
   // Load sample data
   const handleLoadSample = () => {
-    const config = getConfig(locale);
-    analysis.setCV(config.sampleCv);
-    analysis.setJobDescription(config.sampleJob);
+    const sample = getSampleData(locale);
+    analysis.setCV(sample.cv);
+    analysis.setJobDescription(sample.jobDescription);
   };
 
   return (
